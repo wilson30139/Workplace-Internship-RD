@@ -10,36 +10,26 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Page page = new Page();
-            page.Login("123456", "123Eric");
+            
         }
     }
 
-    public class Page
+    public class ShapeFactory
     {
-        public void Login(string empid, string password)
+        public Shape MakeSquare()
         {
-            EmployeeDB employeeDB = new EmployeeDB();
-            employeeDB.GetEmployee(empid);
-            Employee employee = new Employee();
-            var test = employee.Validate(password);
+            Square s = new Square();
+            return s;
         }
     }
 
-    public class Employee
+    public class Square : Shape
     {
-        public bool Validate(string password)
-        {
-            return true;
-        }
+
     }
 
-    public class EmployeeDB
+    public class Shape
     {
-        public Employee GetEmployee(string empid)
-        {
-            Employee e = new Employee();
-            return e;
-        }
+
     }
 }
