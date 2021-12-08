@@ -8,11 +8,7 @@ namespace ConsoleApp1
 {
     class Program2
     {
-        static void Main(string[] args)
-        {
-            Page page = new Page();
-            page.Login("123456", "123Eric");
-        }
+        
     }
 
     public class Page
@@ -20,9 +16,8 @@ namespace ConsoleApp1
         public void Login(string empid, string password)
         {
             EmployeeDB employeeDB = new EmployeeDB();
-            employeeDB.GetEmployee(empid);
-            Employee employee = new Employee();
-            var test = employee.Validate(password);
+            Employee empolyee = employeeDB.GetEmployee(empid);
+            var test = empolyee.Validate(password);
         }
     }
 
