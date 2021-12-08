@@ -8,7 +8,11 @@ namespace ConsoleApp1
 {
     class Program2
     {
-        
+        static void Main(string[] args)
+        {
+            Page page = new Page();
+            page.Login("123456", "123Eric");
+        }
     }
 
     public class Page
